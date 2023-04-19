@@ -1,0 +1,104 @@
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\GymFit.csproj.AssemblyReference.cache
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\MainWindow.g.cs
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\WejscieWyjscieView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\App.g.cs
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\GymFit_MarkupCompile.cache
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\GymFit_MarkupCompile.lref
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\MainWindow.baml
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\WejscieWyjscieResources.baml
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\WejscieWyjscieView.baml
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\GymFit.exe
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\GymFit.pdb
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\bin\Debug\GymFit.exe.config
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\bin\Debug\GymFit.exe
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\bin\Debug\GymFit.pdb
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\MainWindowResources.baml
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\GymFit.g.resources
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\GymFit.Properties.Resources.resources
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\GymFit.csproj.GenerateResource.cache
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\GymFit.csproj.CoreCompileInputs.cache
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\DokumentyKPKWView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\DokumentyKPKWView.baml
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\NowaNotatkaView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\NowaNotatkaView.baml
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\DodajZadanieView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\DodajZadanieView.baml
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\NowaFakturaView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\NowaFakturaView.baml
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\HistoriaWizytView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\HistoriaWizytView.baml
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\DostawcyView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit\GymFit\obj\Debug\View\DostawcyView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GymFit.exe.config
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GymFit.exe
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GymFit.pdb
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GymFit.csproj.AssemblyReference.cache
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\DodajZadanieView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\DostawcyView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\MainWindow.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowaFakturaView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowaNotatkaView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\WejscieWyjscieView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\App.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GymFit_MarkupCompile.cache
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GymFit_MarkupCompile.lref
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\DodajZadanieView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\DostawcyView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\MainWindow.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\MainWindowResources.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowaFakturaView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowaNotatkaView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\WejscieWyjscieResources.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\WejscieWyjscieView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GymFit.g.resources
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GymFit.Properties.Resources.resources
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GymFit.csproj.GenerateResource.cache
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GymFit.csproj.CoreCompileInputs.cache
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GymFit.exe
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GymFit.pdb
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\EntityFramework.dll
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\EntityFramework.xml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GymFit_Content.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\GymFit.csproj.CopyComplete
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\KarnetyView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\KarnetyView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\KarnetResources.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowyKarnetView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\Themes\Generic.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowyKarnetView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\CommonServiceLocator.dll
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\KlienciView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\KlienciView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowyKlientView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowyKlientView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\FakturyView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\FakturyView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\App.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\AdresyView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\AdresyView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\WizytyView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\WizytyView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowaWizytaView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowaWizytaView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowyDostawcaView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowyDostawcaView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\TowaryView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\TowaryView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowyTowarView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowyTowarView.baml
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowyAdresView.g.cs
+C:\Users\bmielniczek\source\repos\GymFit v2.0\GymFit\GymFit\obj\Debug\View\NowyAdresView.baml

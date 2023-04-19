@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="GymFit.View.WejscieWyjscieView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GymFit.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="WejscieWyjscieResources.xaml"/>
+    </UserControl.Resources>
+    <Grid Style="{StaticResource MainGrid}">
+        <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource RowAuto}"/>
+            <RowDefinition Style="{StaticResource RowAuto}"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <GroupBox Header="Wejście / Wyjście" Style="{StaticResource GroupBoxStandardowy}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Style="{StaticResource RowAuto}"/>
+                        <RowDefinition Style="{StaticResource RowAuto}"/>
+                        <RowDefinition Style="{StaticResource RowAuto}"/>
+                        <RowDefinition Style="{StaticResource RowAuto}"/>
+                        <RowDefinition Style="{StaticResource RowAuto}"/>
+                        <RowDefinition Style="{StaticResource RowAuto}"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                        <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                        <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                        <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                        <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                        <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                        <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                        <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                        <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                        <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                        <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                        <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Content="Obiekt: " Style="{StaticResource LabelStandardowy}"/>
+                    <ComboBox Grid.Row="0" Grid.Column="2" Style="{StaticResource ComboBoxStandardowy}"/>
+                    <Label Grid.Row="0" Grid.Column="4" Content="Numer szafki: " Style="{StaticResource LabelStandardowy}"/>
+                    <TextBox Grid.Row="0" Grid.Column="6" Style="{StaticResource TextBoxStandardowy}"/>
+                    <Button Grid.Row="0" Grid.Column="8" Content="Losuj" Style="{StaticResource ButtonStandardowy}"/>
+                    
+                    <Label Grid.Row="1" Grid.Column="0" Content="Cena netto: " Style="{StaticResource LabelStandardowy}"/>
+                    <TextBox Grid.Row="1" Grid.Column="2" Text="0.0"  Style="{StaticResource TextBoxStandardowy}"/>
+                    <Label Grid.Row="1" Grid.Column="4" Content="Stawka VAT: " Style="{StaticResource LabelStandardowy}"/>
+                    <ComboBox Grid.Row="1" Grid.Column="6" Style="{StaticResource ComboBoxStandardowy}">
+                        <ComboBoxItem Content="23%" IsSelected="True"/>
+                    </ComboBox>
+                    <Label Grid.Row="2" Grid.Column="0" Content="Cena brutto: " Style="{StaticResource LabelStandardowy}"/>
+                    <TextBox Grid.Row="2" Grid.Column="2" Text="0.0" IsEnabled="False" Style="{StaticResource TextBoxStandardowy}"/>
+                    
+                    <RadioButton Grid.Row="3" Grid.Column="0" Content="Wejście ulgowe" GroupName="Typ biletu" Style="{StaticResource RadioButtonStandardowy}"/>
+                    <RadioButton Grid.Row="3" Grid.Column="2" Content="Wejście bezpłatne" GroupName="Typ biletu" Style="{StaticResource RadioButtonStandardowy}"/>
+                    <RadioButton Grid.Row="4" Grid.Column="0" IsChecked="True" Content="Wejście z karnetu" GroupName="Typ biletu" Style="{StaticResource RadioButtonStandardowy}"/>
+                    <RadioButton Grid.Row="4" Grid.Column="2" Content="Wejście opłacone" GroupName="Typ biletu" Style="{StaticResource RadioButtonStandardowy}"/>
+
+                    <Button Grid.Row="5" Content="Wejście" Style="{StaticResource ButtonStandardowy}"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Style="{StaticResource RowAuto}"/>
+            </Grid.RowDefinitions>
+            <DataGrid Grid.Row="0" Style="{StaticResource DataGridDolny}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Imię"/>
+                    <DataGridTextColumn Header="Nazwisko"/>
+                    <DataGridTextColumn Header="Obiekt"/>
+                    <DataGridTextColumn Header="Wejście"/>
+                    <DataGridTextColumn Header="Szafka"/>
+                    <DataGridTextColumn Header="Cena brutto"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Grid.Row="1" Content="Drukuj listę" Style="{StaticResource ButtonStandardowy}"/>
+        </Grid>
+    </Grid>
+</UserControl>
+

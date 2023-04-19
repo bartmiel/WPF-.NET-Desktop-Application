@@ -1,0 +1,177 @@
+﻿<UserControl x:Class="GymFit.View.NowaFakturaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GymFit.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="WejscieWyjscieResources.xaml"/>
+    </UserControl.Resources>
+    <Grid Style="{StaticResource MainGrid}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Dokument" Style="{StaticResource ButtonStandardowy}"/>
+            <ComboBox Grid.Column="2" Style="{StaticResource ComboBoxStandardowy}"/>
+            <Label Grid.Column="4" Content="Numer:" Style="{StaticResource LabelStandardowy}"/>
+            <TextBox Grid.Column="6" Text="FA" Style="{StaticResource TextBoxStandardowy}"/>
+            <ListBox Grid.Column="8" Style="{StaticResource ListBoxStandardowy}"/>
+            <TextBox Grid.Column="10" Text="2010"  Style="{StaticResource TextBoxStandardowy}"/>
+        </Grid>
+        <Expander Grid.Row="1" Header="Nagłówek" Style="{StaticResource ExpanderStandardowyRozwiniety}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                    <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                    <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                    <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                    <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                    <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                </Grid.ColumnDefinitions>
+                <!--Wiersz 0-->
+                <Button Grid.Row="0" Grid.Column ="0" Style="{StaticResource ButtonStandardowy}" Content="Kontrahent"/>
+                <ComboBox Grid.Row="0" Grid.Column ="2" Style="{StaticResource ComboBoxStandardowy}"/>
+                <TextBox Grid.Row="0" Grid.Column ="4" Style="{StaticResource TextBoxStandardowy}"/>
+                <!--Wiersz 1-->
+                <Button Grid.Row="1" Grid.Column ="0" Style="{StaticResource ButtonStandardowy}" Content="Kategoria"/>
+                <ComboBox Grid.Row="1" Grid.Column ="2" Style="{StaticResource ComboBoxStandardowy}"/>
+                <TextBox Grid.Row="1" Grid.Column ="4" Style="{StaticResource TextBoxStandardowy}"/>
+                <!--Wiersz 2-->
+                <Button Grid.Row="2" Grid.Column ="0" Style="{StaticResource ButtonStandardowy}" Content="Magazyn"/>
+                <ComboBox Grid.Row="2" Grid.Column ="2" Style="{StaticResource ComboBoxStandardowy}"/>
+                <TextBox Grid.Row="2" Grid.Column ="4" Style="{StaticResource TextBoxStandardowy}"/>
+            </Grid>
+        </Expander>
+        <Expander Grid.Row="2" Header="Daty i Wartości" Style="{StaticResource ExpanderStandardowyRozwiniety}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Style="{StaticResource StackPanelStandardowy}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Data wystawienia:" Style="{StaticResource LabelStandardowy}"/>
+                        <DatePicker Grid.Row="0" Grid.Column="2" Style="{StaticResource DatePickerStandardowy}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Content="Data sprzedaży:" Style="{StaticResource LabelStandardowy}"/>
+                        <DatePicker Grid.Row="1" Grid.Column="2" Style="{StaticResource DatePickerStandardowy}"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Content="Faktura liczona od:" Style="{StaticResource LabelStandardowy}"/>
+                        <ComboBox Grid.Row="2" Grid.Column="2" Style="{StaticResource ComboBoxStandardowy}"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Style="{StaticResource StackPanelStandardowy}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Rabat:" Style="{StaticResource LabelStandardowy}"/>
+                        <ListBox Grid.Row="0" Grid.Column="2" Style="{StaticResource ListBoxStandardowy}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Content="Płatność:" Style="{StaticResource LabelStandardowy}"/>
+                        <ComboBox Grid.Row="1" Grid.Column="2" Style="{StaticResource ComboBoxStandardowy}"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Content="Termin płatności:" Style="{StaticResource LabelStandardowy}"/>
+                        <DatePicker Grid.Row="2" Grid.Column="2" Style="{StaticResource DatePickerStandardowy}"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Grid.Column="4" Style="{StaticResource StackPanelStandardowy}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="Netto:" Style="{StaticResource LabelStandardowy}"/>
+                        <ListBox Grid.Row="0" Grid.Column="2" Style="{StaticResource ListBoxStandardowy}"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Content="Razem:" Style="{StaticResource LabelStandardowy}"/>
+                        <ListBox Grid.Row="1" Grid.Column="2" Style="{StaticResource ListBoxStandardowy}"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Content="Zapłacono:" Style="{StaticResource LabelStandardowy}"/>
+                        <ListBox Grid.Row="2" Grid.Column="2" Style="{StaticResource ListBoxStandardowy}"/>
+
+                        <Label Grid.Row="3" Grid.Column="0" Content="Pozostało:" Style="{StaticResource LabelStandardowy}"/>
+                        <ListBox Grid.Row="3" Grid.Column="2" Style="{StaticResource ListBoxStandardowy}"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Expander>
+        <DataGrid Grid.Row="3" Style="{StaticResource DataGridDolny}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Lp."/>
+                <DataGridTextColumn Header="Kod"/>
+                <DataGridTextColumn Header="Nazwa"/>
+                <DataGridTextColumn Header="Ilość"/>
+                <DataGridTextColumn Header="Jm"/>
+                <DataGridTextColumn Header="Rabat"/>
+                <DataGridTextColumn Header="Cena"/>
+                <DataGridTextColumn Header="Marża"/>
+                <DataGridTextColumn Header="% Marży"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Zapisz" Style="{StaticResource ButtonStandardowy}"/>
+            <Button Grid.Column="2" Content="Anuluj" Style="{StaticResource ButtonStandardowy}"/>
+        </Grid>
+    </Grid>
+</UserControl>

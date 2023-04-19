@@ -1,0 +1,40 @@
+﻿<local:WszystkieViewBase x:Class="GymFit.View.FakturyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GymFit.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="WejscieWyjscieResources.xaml"/>
+    </UserControl.Resources>
+    <Grid Style="{StaticResource MainGrid}">
+        <TabControl>
+            <TabItem Header="Rozliczone">
+                <DataGrid Style="{StaticResource DataGridStandardowy}" AutoGenerateColumns="False" ItemsSource="{Binding List}" SelectedItem="{Binding Path=SelectedItemToDelete, Mode=TwoWay}">
+                    <DataGrid.Columns>
+                        <DataGridCheckBoxColumn Width="25"/>
+                        <DataGridTextColumn Header="Nr dokumentu" Binding="{Binding Numer}"/>
+                        <DataGridTextColumn Header="Dostawca" Binding="{Binding NazwaDostawcy}"/>
+                        <DataGridTextColumn Header="Sposób płatności" Binding="{Binding SposobPlatnosci}"/>
+                        <DataGridTextColumn Header="Data wystawienia" Binding="{Binding DataWystawienia, StringFormat=dd.MM.yyyy}"/>
+                        <DataGridTextColumn Header="Termin platności" Binding="{Binding TerminPlatnosci}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Nierozliczone">
+                <DataGrid Style="{StaticResource DataGridStandardowy}" AutoGenerateColumns="False" ItemsSource="{Binding List}" SelectedItem="{Binding Path=SelectedItemToDelete, Mode=TwoWay}">
+                    <DataGrid.Columns>
+                        <DataGridCheckBoxColumn Width="25"/>
+                        <DataGridTextColumn Header="Nr dokumentu" Binding="{Binding Numer}"/>
+                        <DataGridTextColumn Header="Dostawca" Binding="{Binding NazwaDostawcy}"/>
+                        <DataGridTextColumn Header="Sposób płatności" Binding="{Binding SposobPlatnosci}"/>
+                        <DataGridTextColumn Header="Data wystawienia" Binding="{Binding DataWystawienia, StringFormat=dd.MM.yyyy}"/>
+                        <DataGridTextColumn Header="Termin platności" Binding="{Binding TerminPlatnosci}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</local:WszystkieViewBase>

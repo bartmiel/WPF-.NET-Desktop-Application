@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GymFitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Adres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kraj" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdWojewodztwa" Type="nvarchar" MaxLength="2" />
+    <Property Name="Miejscowosc" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ulica" Type="nvarchar" MaxLength="50" />
+    <Property Name="NrDomu" Type="nvarchar" MaxLength="50" />
+    <Property Name="NrLokalu" Type="nvarchar" MaxLength="50" />
+    <Property Name="KodPocztowy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Poczta" Type="nvarchar" MaxLength="50" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Dostawca">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAdresuSiedziby" Type="int" />
+    <Property Name="IdStatusu" Type="int" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kod" Type="nvarchar" MaxLength="50" />
+    <Property Name="NIP" Type="nvarchar" MaxLength="50" />
+    <Property Name="OsobaKontaktowa" Type="nvarchar" MaxLength="50" />
+    <Property Name="NrTelefonu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Faktura">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Numer" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdDostawcy" Type="int" />
+    <Property Name="IdKlienta" Type="int" />
+    <Property Name="IdSposobuPlatnosci" Type="int" />
+    <Property Name="DataWystawienia" Type="date" />
+    <Property Name="TerminPlatnosci" Type="nvarchar" MaxLength="50" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Grafik">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPracownika" Type="int" Nullable="false" />
+    <Property Name="Dzien" Type="datetime" Nullable="false" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Karnet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumerKarty" Type="nvarchar" MaxLength="50" />
+    <Property Name="WaznyOd" Type="date" />
+    <Property Name="WaznyDo" Type="date" />
+    <Property Name="IdKlienta" Type="int" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajcego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="KarnetObiekt">
+    <Key>
+      <PropertyRef Name="IdKarnetu" />
+      <PropertyRef Name="IdObiektu" />
+    </Key>
+    <Property Name="IdKarnetu" Type="int" Nullable="false" />
+    <Property Name="IdObiektu" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Klient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdOsoby" Type="int" Nullable="false" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Notatka">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPracownika" Type="int" />
+    <Property Name="Tytuł" Type="nvarchar" MaxLength="50" />
+    <Property Name="Notatka" Type="nvarchar" MaxLength="250" />
+    <Property Name="CzyAktywna" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ObiektSportowy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Osoba">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imie" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nazwisko" Type="nvarchar" MaxLength="50" />
+    <Property Name="Plec" Type="char" MaxLength="1" />
+    <Property Name="DataUrodzenia" Type="date" />
+    <Property Name="IdAdresu" Type="int" />
+    <Property Name="NrTelefonu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PozycjaFaktury">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdFaktury" Type="int" />
+    <Property Name="IdTowaru" Type="int" />
+    <Property Name="Cena" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Ilosc" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Rabat" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="CzyAktywna" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Pracownik">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdOsoby" Type="int" />
+    <Property Name="NazwaStanowiska" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataZatrudnienia" Type="datetime" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SposobPlatnosci">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Szafka">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdObiektu" Type="int" />
+    <Property Name="Numer" Type="nvarchar" MaxLength="50" />
+    <Property Name="CzyAktywna" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Towar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kod" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="StawkaVatZakupu" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="StawkaVatSprzedazy" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Marza" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Wizyta">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPracownika" Type="int" />
+    <Property Name="IdKlienta" Type="int" />
+    <Property Name="IdKarnetu" Type="int" />
+    <Property Name="IdSzafki" Type="int" />
+    <Property Name="DataCzasRozpoczecia" Type="datetime" />
+    <Property Name="DataCzasZakonczenia" Type="datetime" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Wojewodztwo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="50" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Zadanie">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Zadanie" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataWyswietlenia" Type="date" />
+    <Property Name="DataWykonania" Type="date" />
+    <Property Name="CzyWykonane" Type="bit" />
+    <Property Name="IdPracownika" Type="int" />
+    <Property Name="IdPracownikaZlecajacego" Type="int" />
+    <Property Name="Priorytet" Type="nvarchar" MaxLength="50" />
+    <Property Name="CzyAktywny" Type="bit" Nullable="false" />
+    <Property Name="Uwagi" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdPracownikaDodajacego" Type="int" />
+    <Property Name="DataCzasDodania" Type="datetime" StoreGeneratedPattern="Computed" />
+    <Property Name="IdPracownikaModyfikujacego" Type="int" />
+    <Property Name="DataCzasModyfikacji" Type="datetime" />
+    <Property Name="IdPracownikaKasujacego" Type="int" />
+    <Property Name="DataCzasSkasowania" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Adres_Wojewodztwo">
+    <End Role="Wojewodztwo" Type="Self.Wojewodztwo" Multiplicity="0..1" />
+    <End Role="Adres" Type="Self.Adres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Wojewodztwo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Adres">
+        <PropertyRef Name="IdWojewodztwa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dostawca_Adres">
+    <End Role="Adres" Type="Self.Adres" Multiplicity="0..1" />
+    <End Role="Dostawca" Type="Self.Dostawca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Dostawca">
+        <PropertyRef Name="IdAdresuSiedziby" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dostawca_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="Dostawca" Type="Self.Dostawca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Dostawca">
+        <PropertyRef Name="IdStatusu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Faktura_Dostawca">
+    <End Role="Dostawca" Type="Self.Dostawca" Multiplicity="0..1" />
+    <End Role="Faktura" Type="Self.Faktura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dostawca">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Faktura">
+        <PropertyRef Name="IdDostawcy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Faktura_SposobPlatnosci">
+    <End Role="SposobPlatnosci" Type="Self.SposobPlatnosci" Multiplicity="0..1" />
+    <End Role="Faktura" Type="Self.Faktura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SposobPlatnosci">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Faktura">
+        <PropertyRef Name="IdSposobuPlatnosci" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grafik_Pracownicy1">
+    <End Role="Pracownik" Type="Self.Pracownik" Multiplicity="1" />
+    <End Role="Grafik" Type="Self.Grafik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pracownik">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Grafik">
+        <PropertyRef Name="IdPracownika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Karnet_Klient">
+    <End Role="Klient" Type="Self.Klient" Multiplicity="0..1" />
+    <End Role="Karnet" Type="Self.Karnet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klient">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Karnet">
+        <PropertyRef Name="IdKlienta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KarnetObiekt_Karnet">
+    <End Role="Karnet" Type="Self.Karnet" Multiplicity="1" />
+    <End Role="KarnetObiekt" Type="Self.KarnetObiekt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Karnet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KarnetObiekt">
+        <PropertyRef Name="IdKarnetu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KarnetObiekt_ObiektSportowy">
+    <End Role="ObiektSportowy" Type="Self.ObiektSportowy" Multiplicity="1" />
+    <End Role="KarnetObiekt" Type="Self.KarnetObiekt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObiektSportowy">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KarnetObiekt">
+        <PropertyRef Name="IdObiektu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Klient_Osoba">
+    <End Role="Osoba" Type="Self.Osoba" Multiplicity="1" />
+    <End Role="Klient" Type="Self.Klient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Osoba">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Klient">
+        <PropertyRef Name="IdOsoby" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notatka_Pracownicy">
+    <End Role="Pracownik" Type="Self.Pracownik" Multiplicity="0..1" />
+    <End Role="Notatka" Type="Self.Notatka" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pracownik">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notatka">
+        <PropertyRef Name="IdPracownika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Osoba_Adres">
+    <End Role="Adres" Type="Self.Adres" Multiplicity="0..1" />
+    <End Role="Osoba" Type="Self.Osoba" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Osoba">
+        <PropertyRef Name="IdAdresu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Osoba_Adres1">
+    <End Role="Adres" Type="Self.Adres" Multiplicity="0..1" />
+    <End Role="Osoba" Type="Self.Osoba" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adres">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Osoba">
+        <PropertyRef Name="IdAdresu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PozycjaFaktury_Faktura">
+    <End Role="Faktura" Type="Self.Faktura" Multiplicity="0..1" />
+    <End Role="PozycjaFaktury" Type="Self.PozycjaFaktury" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Faktura">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PozycjaFaktury">
+        <PropertyRef Name="IdFaktury" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PozycjaFaktury_Towar">
+    <End Role="Towar" Type="Self.Towar" Multiplicity="0..1" />
+    <End Role="PozycjaFaktury" Type="Self.PozycjaFaktury" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Towar">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PozycjaFaktury">
+        <PropertyRef Name="IdTowaru" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pracownicy_Osoba">
+    <End Role="Osoba" Type="Self.Osoba" Multiplicity="0..1" />
+    <End Role="Pracownik" Type="Self.Pracownik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Osoba">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pracownik">
+        <PropertyRef Name="IdOsoby" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Szafka_ObiektSportowy">
+    <End Role="ObiektSportowy" Type="Self.ObiektSportowy" Multiplicity="0..1" />
+    <End Role="Szafka" Type="Self.Szafka" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObiektSportowy">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Szafka">
+        <PropertyRef Name="IdObiektu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Wizyta_Karnet">
+    <End Role="Karnet" Type="Self.Karnet" Multiplicity="0..1" />
+    <End Role="Wizyta" Type="Self.Wizyta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Karnet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Wizyta">
+        <PropertyRef Name="IdKarnetu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Wizyta_Klient">
+    <End Role="Klient" Type="Self.Klient" Multiplicity="0..1" />
+    <End Role="Wizyta" Type="Self.Wizyta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klient">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Wizyta">
+        <PropertyRef Name="IdKlienta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Wizyta_Pracownicy">
+    <End Role="Pracownik" Type="Self.Pracownik" Multiplicity="0..1" />
+    <End Role="Wizyta" Type="Self.Wizyta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pracownik">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Wizyta">
+        <PropertyRef Name="IdPracownika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zadanie_Pracownicy">
+    <End Role="Pracownik" Type="Self.Pracownik" Multiplicity="0..1" />
+    <End Role="Zadanie" Type="Self.Zadanie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pracownik">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Zadanie">
+        <PropertyRef Name="IdPracownika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GymFitModelStoreContainer">
+    <EntitySet Name="Adres" EntityType="Self.Adres" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dostawca" EntityType="Self.Dostawca" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Faktura" EntityType="Self.Faktura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grafik" EntityType="Self.Grafik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Karnet" EntityType="Self.Karnet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KarnetObiekt" EntityType="Self.KarnetObiekt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Klient" EntityType="Self.Klient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notatka" EntityType="Self.Notatka" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObiektSportowy" EntityType="Self.ObiektSportowy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Osoba" EntityType="Self.Osoba" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PozycjaFaktury" EntityType="Self.PozycjaFaktury" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pracownik" EntityType="Self.Pracownik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SposobPlatnosci" EntityType="Self.SposobPlatnosci" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Szafka" EntityType="Self.Szafka" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Towar" EntityType="Self.Towar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wizyta" EntityType="Self.Wizyta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wojewodztwo" EntityType="Self.Wojewodztwo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Zadanie" EntityType="Self.Zadanie" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Adres_Wojewodztwo" Association="Self.FK_Adres_Wojewodztwo">
+      <End Role="Wojewodztwo" EntitySet="Wojewodztwo" />
+      <End Role="Adres" EntitySet="Adres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dostawca_Adres" Association="Self.FK_Dostawca_Adres">
+      <End Role="Adres" EntitySet="Adres" />
+      <End Role="Dostawca" EntitySet="Dostawca" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dostawca_Status" Association="Self.FK_Dostawca_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Dostawca" EntitySet="Dostawca" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Faktura_Dostawca" Association="Self.FK_Faktura_Dostawca">
+      <End Role="Dostawca" EntitySet="Dostawca" />
+      <End Role="Faktura" EntitySet="Faktura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Faktura_SposobPlatnosci" Association="Self.FK_Faktura_SposobPlatnosci">
+      <End Role="SposobPlatnosci" EntitySet="SposobPlatnosci" />
+      <End Role="Faktura" EntitySet="Faktura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grafik_Pracownicy1" Association="Self.FK_Grafik_Pracownicy1">
+      <End Role="Pracownik" EntitySet="Pracownik" />
+      <End Role="Grafik" EntitySet="Grafik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Karnet_Klient" Association="Self.FK_Karnet_Klient">
+      <End Role="Klient" EntitySet="Klient" />
+      <End Role="Karnet" EntitySet="Karnet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KarnetObiekt_Karnet" Association="Self.FK_KarnetObiekt_Karnet">
+      <End Role="Karnet" EntitySet="Karnet" />
+      <End Role="KarnetObiekt" EntitySet="KarnetObiekt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KarnetObiekt_ObiektSportowy" Association="Self.FK_KarnetObiekt_ObiektSportowy">
+      <End Role="ObiektSportowy" EntitySet="ObiektSportowy" />
+      <End Role="KarnetObiekt" EntitySet="KarnetObiekt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Klient_Osoba" Association="Self.FK_Klient_Osoba">
+      <End Role="Osoba" EntitySet="Osoba" />
+      <End Role="Klient" EntitySet="Klient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notatka_Pracownicy" Association="Self.FK_Notatka_Pracownicy">
+      <End Role="Pracownik" EntitySet="Pracownik" />
+      <End Role="Notatka" EntitySet="Notatka" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Osoba_Adres" Association="Self.FK_Osoba_Adres">
+      <End Role="Adres" EntitySet="Adres" />
+      <End Role="Osoba" EntitySet="Osoba" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Osoba_Adres1" Association="Self.FK_Osoba_Adres1">
+      <End Role="Adres" EntitySet="Adres" />
+      <End Role="Osoba" EntitySet="Osoba" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PozycjaFaktury_Faktura" Association="Self.FK_PozycjaFaktury_Faktura">
+      <End Role="Faktura" EntitySet="Faktura" />
+      <End Role="PozycjaFaktury" EntitySet="PozycjaFaktury" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PozycjaFaktury_Towar" Association="Self.FK_PozycjaFaktury_Towar">
+      <End Role="Towar" EntitySet="Towar" />
+      <End Role="PozycjaFaktury" EntitySet="PozycjaFaktury" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pracownicy_Osoba" Association="Self.FK_Pracownicy_Osoba">
+      <End Role="Osoba" EntitySet="Osoba" />
+      <End Role="Pracownik" EntitySet="Pracownik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Szafka_ObiektSportowy" Association="Self.FK_Szafka_ObiektSportowy">
+      <End Role="ObiektSportowy" EntitySet="ObiektSportowy" />
+      <End Role="Szafka" EntitySet="Szafka" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Wizyta_Karnet" Association="Self.FK_Wizyta_Karnet">
+      <End Role="Karnet" EntitySet="Karnet" />
+      <End Role="Wizyta" EntitySet="Wizyta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Wizyta_Klient" Association="Self.FK_Wizyta_Klient">
+      <End Role="Klient" EntitySet="Klient" />
+      <End Role="Wizyta" EntitySet="Wizyta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Wizyta_Pracownicy" Association="Self.FK_Wizyta_Pracownicy">
+      <End Role="Pracownik" EntitySet="Pracownik" />
+      <End Role="Wizyta" EntitySet="Wizyta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zadanie_Pracownicy" Association="Self.FK_Zadanie_Pracownicy">
+      <End Role="Pracownik" EntitySet="Pracownik" />
+      <End Role="Zadanie" EntitySet="Zadanie" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

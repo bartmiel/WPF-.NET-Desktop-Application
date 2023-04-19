@@ -1,0 +1,30 @@
+﻿<local:WszystkieViewBase x:Class="GymFit.View.KarnetyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GymFit.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="KarnetResources.xaml"/>
+    </UserControl.Resources>
+    <Grid Style="{StaticResource MainGrid}">
+        <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource RowAuto}"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <DataGrid Grid.Row="0" Grid.Column="0" Style="{StaticResource DataGridStandardowy}" AutoGenerateColumns="False" ItemsSource="{Binding List}" SelectedItem="{Binding Path=SelectedItemToDelete, Mode=TwoWay}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Numer karnetu" Binding="{Binding NrKarty}"/>
+                    <DataGridTextColumn Header="Ważny od" Binding="{Binding WaznyOd, StringFormat=dd.MM.yyyy}"/>
+                    <DataGridTextColumn Header="Ważny do" Binding="{Binding WaznyDo, StringFormat=dd.MM.yyyy}"/>
+                    <DataGridTextColumn Header="Imię" Binding="{Binding KlientImie}"/>
+                    <DataGridTextColumn Header="Nazwisko" Binding="{Binding KlientNazwisko}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</local:WszystkieViewBase>
+
+

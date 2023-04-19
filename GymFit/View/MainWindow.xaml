@@ -1,0 +1,463 @@
+﻿<Window x:Class="GymFit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GymFit"
+        mc:Ignorable="d"
+        Title="GymFit"  WindowState="Maximized">
+    <Window.Resources>
+        <ResourceDictionary Source="MainWindowResources.xaml"/>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Key="F4" Modifiers="alt" Command="{Binding Close}"/>
+        <KeyBinding Key="F11" Modifiers="Ctrl" Command="{Binding FullScreen}"/>
+    </Window.InputBindings>
+    <Grid Style="{StaticResource MainGrid}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Style="{StaticResource RowStatusBar}"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMikro}"/>
+            </Grid.ColumnDefinitions>
+            <Menu Grid.Column="0" Style="{StaticResource MenuStandardowe}">
+                <MenuItem Header="_Plik">
+                    <MenuItem Header="_Utwórz kopię bezpieczeństwa" InputGestureText="Ctrl+F2">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/1-kopia.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="F2" Modifiers="Ctrl"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                    <MenuItem Header="_Przywróć z kopii bezpieczeństwa" InputGestureText="Ctrl+F3">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/2-przywroc-kopie.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="F3" Modifiers="Ctrl"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="_Eksport danych" InputGestureText="Ctrl+F6">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/3-eksport.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="F6" Modifiers="Ctrl"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                    <MenuItem Header="_Import danych" InputGestureText="Ctrl+F7">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/4-import.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="F7" Modifiers="Ctrl"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Peł_ny ekran" InputGestureText="Ctrl+F11" Command="{Binding FullScreen}">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/5-pelen-ekran.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="F11" Modifiers="Ctrl"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                    <MenuItem Header="_Zakończ" InputGestureText="Alt+F4" Command="{Binding Close}">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/6-zapisz.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="F4" Modifiers="Alt"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Kontrahenci">
+                    <MenuItem Header="_Wszyscy" InputGestureText="Ctrl+A">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/1-wszyscy.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="A" Modifiers="Ctrl"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="_Dodaj kontrahenta">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/2-dodaj-kontrahenta.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="_Odbiorcy" InputGestureText="Ctrl+O">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/3-odbiorcy.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="O" Modifiers="Ctrl"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                    <MenuItem Header="Do_stawcy" InputGestureText="Ctrl+D" Command="{Binding CreateDostawcyCommand}">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/4-dostawcy.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="D" Modifiers="Ctrl"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Fitness Club">
+                    <MenuItem Header="_Wejście/Wyjście" InputGestureText="Alt+E" Command="{Binding CreateWejscieWyjscieCommand}">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/1-wejscie-wyjscie.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="E" Modifiers="Alt"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="_Klienci" Command="{Binding CreateKlienciCommand}">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/2-klienci.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="_Historia wizyt" InputGestureText="Alt+H" Command="{Binding CreateHistoriaWizytCommand}">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/3-historia-wizyt.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="H" Modifiers="Alt"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="K_arnety" Command="{Binding CreateKarnetyCommand}">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/4-karnety.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Sprzedaż i zakup">
+                    <MenuItem Header="_Indeks produktów">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/1-indeks.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="_Sprzedaż">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/2-sprzedaz.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Zakupy">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/3-zakupy.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Koszty">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/4-koszty.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Pozycje z dokumentów">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/5-pozycje.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Kasa fiskalna">
+                    <MenuItem Header="_Dokumenty KP/KW" Command="{Binding CreateDokumentyKPKWCommand}">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/1-dokumenty-kp-kw.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Raporty kasowe">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/2-raporty-kasowe.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Rozliczenia kontrahentów">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/3-rozliczenia.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="_Nowa faktura" Command="{Binding CreateNowaFakturaCommand}">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/4-nowa-faktura.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Drukuj paragon" InputGestureText="Shift+F1">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/5-nowy-paragon.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="F1" Modifiers="Shift"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                    <MenuItem Header="_Wysuń szufladę" InputGestureText="Shift+F2">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/6-wysun-szuflade.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="F2" Modifiers="Shift"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="P_omoc">
+                    <MenuItem Header="_Umowa licencyjna">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/1-umowa-licencyjna.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Rejestracja">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/2-rejestracja.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Aktualizuj">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/3-aktualizuj.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Strona domowa gymfit.pl">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/4-strona-domowa.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="O programie" InputGestureText="Ctrl+F1">
+                        <MenuItem.Icon>
+                            <Image Source="/Icons/Menu/5-informacje.png" Style="{StaticResource MenuIconStandardowy}"/>
+                        </MenuItem.Icon>
+                        <MenuItem.InputBindings>
+                            <KeyBinding Key="F1" Modifiers="Ctrl"/>
+                        </MenuItem.InputBindings>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+            <Label Grid.Column="2" Style="{StaticResource LabelMainWindow}">Język</Label>
+            <ComboBox Grid.Column="3" Style="{StaticResource ComboBoxLanguageChooser}">
+                <ComboBoxItem Content = "Deutsch"/>
+                <ComboBoxItem Content = "English"/>
+                <ComboBoxItem Content = "Francais"/>
+                <ComboBoxItem Content = "Polski" IsSelected="True"/>
+            </ComboBox>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMikro}"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.Column="0">
+                <GroupBox Header="Skróty" Style="{StaticResource GroupBoxOperacyjny}">
+                    <HeaderedContentControl Content="{Binding Path=Commands}" ContentTemplate="{StaticResource CommandsTemplate}"/>
+                </GroupBox>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Style="{StaticResource ButtonNaviBar}">
+                    <StackPanel>
+                        <Image Grid.Column="0" Source="/Icons/NaviBar/1-strona-glowna.png" Style="{StaticResource NaviBarIconStandardowy}"/>
+                        <TextBlock Grid.Column="1">Strona główna</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Column="1" Style="{StaticResource ButtonNaviBar}" Command="{Binding CreateWejscieWyjscieCommand}">
+                    <StackPanel>
+                        <Image Grid.Column="0" Source="/Icons/NaviBar/2-wejscie-wyjscie.png" Style="{StaticResource NaviBarIconStandardowy}"/>
+                        <TextBlock Grid.Column="1">Wejście/Wyjście</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Column="2" Style="{StaticResource ButtonNaviBar}" Command="{Binding CreateKlienciCommand}">
+                    <StackPanel>
+                        <Image Grid.Column="0" Source="/Icons/NaviBar/3-klienci.png" Style="{StaticResource NaviBarIconStandardowy}"/>
+                        <TextBlock Grid.Column="1">Klienci</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Column="3" Style="{StaticResource ButtonNaviBar}" Command="{Binding CreateHistoriaWizytCommand}">
+                    <StackPanel>
+                        <Image Grid.Column="0" Source="/Icons/NaviBar/4-historia-wizyt.png" Style="{StaticResource NaviBarIconStandardowy}" />
+                        <TextBlock Grid.Column="1">Historia wizyt</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Column="4" Style="{StaticResource ButtonNaviBar}" Command="{Binding CreateKarnetyCommand}">
+                    <StackPanel>
+                        <Image Grid.Column="0" Source="/Icons/NaviBar/5-karnety.png" Style="{StaticResource NaviBarIconStandardowy}" />
+                        <TextBlock Grid.Column="1">Karnety</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Column="5" Style="{StaticResource ButtonNaviBar}">
+                    <StackPanel>
+                        <Image Grid.Column="0" Source="/Icons/NaviBar/6-odbiorcy.png" Style="{StaticResource NaviBarIconStandardowy}" />
+                        <TextBlock Grid.Column="1">Odbiorcy</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Column="6" Style="{StaticResource ButtonNaviBar}" Command="{Binding CreateDostawcyCommand}">
+                    <StackPanel>
+                        <Image Grid.Column="0" Source="/Icons/NaviBar/7-dostawcy.png" Style="{StaticResource NaviBarIconStandardowy}" />
+                        <TextBlock Grid.Column="1">Dostawcy</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Column="7" Style="{StaticResource ButtonNaviBar}"  Command="{Binding CreateDokumentyKPKWCommand}">
+                    <StackPanel>
+                        <Image Grid.Column="0" Source="/Icons/NaviBar/8-dokumenty-kw-kp.png" Style="{StaticResource NaviBarIconStandardowy}"/>
+                        <TextBlock Grid.Column="1">Dokumenty KP/KW</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Grid.Column="8" Style="{StaticResource ButtonNaviBar}">
+                    <StackPanel>
+                        <Image Grid.Column="0" Source="/Icons/NaviBar/9-raporty-kasowe.png" Style="{StaticResource NaviBarIconStandardowy}" />
+                        <TextBlock Grid.Column="1">Raporty kasowe</TextBlock>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="2">
+                <GroupBox Header="Obszar Roboczy" Style="{StaticResource GroupBoxSrodkowy}">
+                    <HeaderedContentControl Content="{Binding Path=Workspaces}" ContentTemplate="{StaticResource WorkspacesTemplate}"/>
+                </GroupBox>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="4" Grid.RowSpan="2">
+                <GroupBox Header="Narzędzia" Style="{StaticResource GroupBoxOperacyjny}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <DockPanel Grid.Row="0">
+                            <Image Grid.Column="0" Source="/Icons/RightToolsSection/1-kalendarz.png" Style="{StaticResource NaviBarIconStandardowy}"/>
+                            <Label Style="{StaticResource LabelMainWindow}">Grafik:</Label>
+                        </DockPanel>
+                        <Grid Grid.Row="1">
+                            <Viewbox Grid.Row="0" Style="{StaticResource ViewBoxForCallendar}">
+                                <Calendar Style="{StaticResource CalendarStandardowy}" SelectedDate="{Binding Path=GrafikKalendarz, UpdateSourceTrigger=PropertyChanged}"/>
+                            </Viewbox>
+                        </Grid>
+                        <Grid Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <DockPanel Grid.Row="0">
+                                <Image Source="/Icons/RightToolsSection/2-zadania.png" Style="{StaticResource NaviBarIconStandardowy}"/>
+                                <Label Style="{StaticResource LabelMainWindow}">Zadania:</Label>
+                            </DockPanel>
+                            <TextBlock Grid.Row="1" Style="{StaticResource TextBlockMainWindow}">
+                            <CheckBox Content="Wymienić zamek w szafce nr 5"/>
+                            </TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <DockPanel Grid.Row="0">
+                                <Image Grid.Column="0" Source="/Icons/RightToolsSection/3-notatki.png" Style="{StaticResource NaviBarIconStandardowy}"/>
+                                <Label Style="{StaticResource LabelMainWindow}">Notatki:</Label>
+                            </DockPanel>
+                            <TextBlock Grid.Row="1" Style="{StaticResource TextBlockMainWindow}">
+                        <Hyperlink Style="{StaticResource HyperLinkStandardowy}">
+                            <Bold>Przygotuj...</Bold>
+                        </Hyperlink>
+                            </TextBlock>
+                        </Grid>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </Grid>
+        <DockPanel Grid.Row="2">
+            <StatusBar Style="{StaticResource StatusBarStandardowy}">
+                <StatusBar.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                    </ItemsPanelTemplate>
+                </StatusBar.ItemsPanel>
+                <StatusBarItem Grid.Column="0" Style="{StaticResource StatusBarItemStandardowy}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="/Icons/StatusBar/1-uzytkownik-administrator.png" Style="{StaticResource StatusBarIconStandardowy}"/>
+                        <TextBlock Grid.Column="1" Style="{StaticResource StatusBarTextBlockStandardowy}">Użytkownik:</TextBlock>
+                        <TextBlock Grid.Column="2" Style="{StaticResource StatusBarTextBlockStandardowy}">Administrator</TextBlock>
+                    </Grid>
+                </StatusBarItem>
+                <Separator Grid.Column="1"/>
+                <StatusBarItem Grid.Column="2" Style="{StaticResource StatusBarItemStandardowy}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="/Icons/StatusBar/2-fabryka-dzika.png" Style="{StaticResource StatusBarIconStandardowy}"/>
+                        <TextBlock Grid.Column="1" Style="{StaticResource StatusBarTextBlockStandardowy}">FabrykaDzika</TextBlock>
+                        <TextBlock Grid.Column="2" Style="{StaticResource StatusBarTextBlockStandardowy}">Kraków ul. Zielona 15</TextBlock>
+                    </Grid>
+                </StatusBarItem>
+                <StatusBarItem Grid.Column="4" Style="{StaticResource StatusBarItemStandardowy}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="/Icons/StatusBar/3-polaczono-z-baza-danych.png" Style="{StaticResource StatusBarIconStandardowy}"/>
+                        <TextBlock Grid.Column="1" Style="{StaticResource StatusBarTextBlockStandardowy}">Połączono z bazą danych:</TextBlock>
+                        <TextBlock Grid.Column="2" Style="{StaticResource StatusBarTextBlockStandardowy}">GymFit.dbx</TextBlock>
+                    </Grid>
+                </StatusBarItem>
+                <StatusBarItem Grid.Column="6" Style="{StaticResource StatusBarItemPrawy}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="/Icons/StatusBar/4-tworzenie-kopii-zapasowej.png" Style="{StaticResource StatusBarIconStandardowy}"/>
+                        <TextBlock Grid.Column="1" Style="{StaticResource StatusBarTextBlockStandardowy}">Tworzenie kopii zapasowej:</TextBlock>
+                        <ProgressBar Grid.Column="2" Style="{StaticResource ProgresBarStandardowy}"/>
+                    </Grid>
+                </StatusBarItem>
+            </StatusBar>
+        </DockPanel>
+    </Grid>
+</Window>

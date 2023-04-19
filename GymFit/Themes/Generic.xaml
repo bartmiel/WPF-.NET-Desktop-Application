@@ -1,0 +1,153 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:GymFit.View">
+<!--Style zdefiniowane do użycia w Generic.xaml-->
+    <Style x:Key="ExpanderStandardowyRozwiniety" TargetType="{x:Type Expander}">
+        <Setter Property="IsExpanded" Value="true"/>
+        <Setter Property="Margin" Value="4,5"/>
+        <Setter Property="Padding" Value="3,3"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="BorderBrush" Value="LightGray"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+
+    <Style x:Key="ColumnAuto" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="auto"/>
+    </Style>
+
+    <Style x:Key="ColumnSeparacyjnaMala" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="15"/>
+    </Style>
+
+    <Style x:Key="ColumnSeparacyjnaMikro" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="5"/>
+    </Style>
+
+    <Style x:Key="RowKarnet" TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="35"/>
+    </Style>
+
+    <Style x:Key="LabelStandardowy" TargetType="{x:Type Label}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="2,2"/>
+    </Style>
+    
+    <Style x:Key="TextBoxStandardowy" TargetType="{x:Type TextBox}">
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Margin" Value="2,5"/>
+        <Setter Property="Padding" Value="2,2"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="HorizontalContentAlignment"  Value="Right"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="ComboBoxStandardowy" TargetType="{x:Type ComboBox}">
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Margin" Value="2,5"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="HorizontalContentAlignment"  Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="ButtonStandardowy" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="4,5"/>
+        <Setter Property="Padding" Value="2,2"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="LightGray"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style x:Key="ToolBarStandardowy" TargetType="{x:Type ToolBar}">
+        <Setter Property="Background" Value="Azure"/>
+        <Setter Property="Margin" Value="0,2,0,2"/>
+        <Setter Property="Height" Value="50"/>
+    </Style>
+    <!-- KONIEC ZDEFINIOWANYCH STYLI -->
+
+
+    <Style TargetType="{x:Type local:WszystkieViewBase}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:WszystkieViewBase}">
+                    <Grid Margin="0,5,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="54"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ToolBar Grid.Row="0" Style="{StaticResource ToolBarStandardowy}">
+                            <Button Content="+" Height="30" Width="30" Command="{Binding AddCommand}"/>
+                            <Button Content="M" Height="30" Width="30"/>
+                            <Button Content="-" Height="30" Width="30" Command="{Binding DeleteSelected}"/>
+                            <Button Content="O" Height="30" Width="30" Command="{Binding LoadCommand}"/>
+                        </ToolBar>
+                        <Expander Grid.Row="1" Header="Sortowanie i filtrowanie" Style="{StaticResource ExpanderStandardowyRozwiniety}">
+                            <Grid Margin="0,6,0,6">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Style="{StaticResource RowKarnet}"/>
+                                    <RowDefinition Style="{StaticResource RowKarnet}"/>
+                                    <RowDefinition Style="{StaticResource RowKarnet}"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                                    <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                                    <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                                    <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                                    <ColumnDefinition Style="{StaticResource ColumnAuto}"/>
+                                    <ColumnDefinition Style="{StaticResource ColumnSeparacyjnaMala}"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Sortuj wzgledem:" Style="{StaticResource LabelStandardowy}"/>
+                                <ComboBox Grid.Row="0" Grid.Column="2" Style="{StaticResource ComboBoxStandardowy}"
+                                          ItemsSource="{Binding SortComboboxItems}"
+                                          SelectedValue="{Binding Path=SortField, Mode=TwoWay}"
+                                          />
+                                <Button Grid.Row="0" Grid.Column="4" Content="Wykonaj" Style="{StaticResource ButtonStandardowy}"
+                                        Command="{Binding SortCommand}"
+                                        />
+                                
+                                <Label Grid.Row="1" Grid.Column="0" Content="Filtruj wzgledem:" Style="{StaticResource LabelStandardowy}"/>
+                                <ComboBox Grid.Row="1" Grid.Column="2" Style="{StaticResource ComboBoxStandardowy}"
+                                          ItemsSource="{Binding FindComboboxItems}"
+                                          SelectedValue="{Binding Path=FindField, Mode=TwoWay}"
+                                          />
+                                <Label Grid.Row="2" Grid.Column="0" Content="Szukaj" Style="{StaticResource LabelStandardowy}"/>
+                                <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource TextBoxStandardowy}"
+                                         Text="{Binding FindTextBox}"
+                                         />
+                                <Button Grid.Row="2" Grid.Column="4" Content="Wykonaj" Style="{StaticResource ButtonStandardowy}"
+                                        Command="{Binding FindCommand}"
+                                        />
+                            </Grid>
+                        </Expander>
+                        <ContentPresenter Grid.Row="2"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:JedenViewBase}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:JedenViewBase}">
+                    <Grid Margin="0,10,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="54"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <ToolBar Grid.Row="0" Style="{StaticResource ToolBarStandardowy}">
+                            <Button Content="Zapisz i zamknij" Height="30" Width="150" Command="{Binding SaveCommand}"/>
+                            <Button Content="Anuluj" Height="30" Width="80" Command="{Binding CloseCommand}"/>
+                        </ToolBar>
+                        <ContentPresenter Grid.Row="1" Margin="0,5,0,5"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

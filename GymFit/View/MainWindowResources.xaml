@@ -1,0 +1,298 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:GymFit.ViewModel"
+                    xmlns:vw="clr-namespace:GymFit.View">
+
+    <!--Tu łączymy ViewModel z View-->
+    <DataTemplate DataType="{x:Type vm:WejscieWyjscieViewModel}">
+        <vw:WejscieWyjscieView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:FakturyViewModel}">
+        <vw:FakturyView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NowaNotatkaViewModel}">
+        <vw:NowaNotatkaView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:DodajZadanieViewModel}">
+        <vw:DodajZadanieView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NowaFakturaViewModel}">
+        <vw:NowaFakturaView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:WizytyViewModel}">
+        <vw:WizytyView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:DostawcyViewModel}">
+        <vw:DostawcyView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:KarnetyViewModel}">
+        <vw:KarnetyView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NowyKarnetViewModel}">
+        <vw:NowyKarnetView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:KlienciViewModel}">
+        <vw:KlienciView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NowyKlientViewModel}">
+        <vw:NowyKlientView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AdresyViewModel}">
+        <vw:AdresyView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NowaWizytaViewModel}">
+        <vw:NowaWizytaView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NowyDostawcaViewModel}">
+        <vw:NowyDostawcaView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:TowaryViewModel}">
+        <vw:TowaryView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NowyTowarViewModel}">
+        <vw:NowyTowarView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NowyAdresViewModel}">
+        <vw:NowyAdresView/>
+    </DataTemplate>
+
+    <!--#region Style kontrolek-->
+    <!--#region MainWindow MainGrid-->
+    <Style x:Key="MainGrid" TargetType="{x:Type Grid}">
+        <Setter Property="Background" Value="Azure"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region Menu-->
+    <Style x:Key="MenuStandardowe" TargetType="{x:Type Menu}">
+        <Setter Property="Margin" Value="0,2"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Background" Value="Azure"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region GroupBox-->
+    <Style x:Key="GroupBoxStandardowy" TargetType="{x:Type GroupBox}">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="2,0,2,10"/>
+        <Setter Property="BorderBrush" Value="LightGray"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <Style x:Key="GroupBoxOperacyjny" BasedOn="{StaticResource GroupBoxStandardowy}" TargetType="{x:Type GroupBox}">
+        <Setter Property="Margin" Value="5,15,2,10"/>
+    </Style>
+
+    <Style x:Key="GroupBoxSrodkowy" BasedOn="{StaticResource GroupBoxStandardowy}" TargetType="{x:Type GroupBox}">
+        <Setter Property="Margin" Value="0,15,0,10"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region Label-->
+    <Style x:Key="LabelMainWindow" TargetType="{x:Type Label}">
+        <Setter Property="Margin" Value="2,2"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region HyperLink-->
+    <Style x:Key="HyperLinkStandardowy" TargetType="{x:Type Hyperlink}">
+        <Setter Property="TextDecorations" Value="None"/>
+        <Setter Property="FontStyle" Value="Oblique"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region Button-->
+    <Style x:Key="ButtonStandardowy" TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="2,6"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="LightGray"/>
+    </Style>
+
+    <Style x:Key="ButtonMainWindow" BasedOn="{StaticResource ButtonStandardowy}" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="auto"/>
+        <Setter Property="Padding" Value="2,2"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style x:Key="ButtonNaviBar" BasedOn="{StaticResource ButtonStandardowy}" TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="5,10,5,0"/>
+        <Setter Property="Height" Value="auto"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region Style ComboBox-->
+    <Style x:Key="ComboBoxLanguageChooser" TargetType="{x:Type ComboBox}">
+        <Setter Property="Width" Value="140"/>
+        <Setter Property="Height" Value="auto"/>
+        <Setter Property="Margin" Value="5,2"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="Azure"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region Style Calendar-->
+    <Style x:Key="CalendarStandardowy" TargetType="{x:Type Calendar}">
+        <Setter Property="Margin" Value="2,2"/>
+        <Setter Property="IsTodayHighlighted" Value="true"/>
+        <Setter Property="Background" Value="White"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region ViewBox-->
+    <Style x:Key="ViewBoxForCallendar" TargetType="{x:Type Viewbox}">
+
+    </Style>
+    <!--#endregion-->
+    <!--#region Style TextBlock-->
+    <Style x:Key="TextBlockMainWindow" TargetType="{x:Type TextBlock}">
+        <Setter Property="Margin" Value="2,2"/>
+        <Setter Property="Padding" Value="2,2"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Background" Value="White"/>
+    </Style>
+
+    <Style x:Key="StatusBarTextBlockStandardowy" TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10,2,2,2"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region Style Expander-->
+    <Style x:Key="ExpanderStandardowyRozwiniety" TargetType="{x:Type Expander}">
+        <Setter Property="IsExpanded" Value="true"/>
+        <Setter Property="Margin" Value="5,5"/>
+        <Setter Property="Padding" Value="3,3"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region Rows-->
+    <Style x:Key="RowStatusBar" TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="35"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region Columns-->
+    <Style x:Key="ColumnSeparacyjnaMala" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="20"/>
+    </Style>
+
+    <Style x:Key="ColumnSeparacyjnaMikro" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="10"/>
+    </Style>
+
+    <Style x:Key="ColumnAuto" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="auto"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region StatusBar-->
+    <Style x:Key="StatusBarStandardowy" TargetType="{x:Type StatusBar}">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Azure"/>
+        <Setter Property="DockPanel.Dock" Value="Top"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region StatusBarItem-->
+    <Style x:Key="StatusBarItemStandardowy" TargetType="{x:Type StatusBarItem}">
+        <Setter Property="Margin" Value="10,0"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="StatusBarItemPrawy" BasedOn="{StaticResource StatusBarItemStandardowy}" TargetType="{x:Type StatusBarItem}">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region StatusBarIcon-->
+    <Style x:Key="StatusBarIconStandardowy" TargetType="{x:Type Image}">
+        <Setter Property="Height" Value="29"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="NaviBarIconStandardowy" TargetType="{x:Type Image}">
+        <Setter Property="Height" Value="39"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="MenuIconStandardowy" TargetType="{x:Type Image}">
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+    </Style>
+    <!--#endregion-->
+    <!--#region ProgressBar-->
+    <Style x:Key="ProgresBarStandardowy" TargetType="{x:Type ProgressBar}">
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Height" Value="15"/>
+        <Setter Property="Value" Value="80"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5,2,0,2"/>
+    </Style>
+    <!--#endregion-->
+    <!--#endregion-->
+
+    <!--Template do zakładek-->
+    <!--This template explains how to render the list of commands on the left side in the main window (the 'Control Panel' area).-->
+    <DataTemplate x:Key="CommandsTemplate">
+        <ItemsControl IsTabStop="False" ItemsSource="{Binding}" Margin="6,2">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Content="{Binding Path=DisplayName}" Command="{Binding Path=Command}" Style="{StaticResource ButtonStandardowy}">
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </DataTemplate>
+
+    <!--This template explains how to render a tab item with a close button.-->
+    <DataTemplate x:Key="ClosableTabItemTemplate">
+        <DockPanel Width="120">
+
+            <Button 
+        Command="{Binding Path=CloseCommand}"
+        BorderBrush="WhiteSmoke"
+        Background="White"
+        Foreground="#202731"
+        Content="X"
+        Cursor="Hand"
+        DockPanel.Dock="Right"
+        Focusable="False"
+        FontFamily="Courier" 
+        FontSize="9"
+        FontWeight="Bold"  
+        Margin="0,1,0,0"
+        Padding="0"
+        VerticalContentAlignment="Bottom"
+        Width="16" Height="16" 
+        />
+            <ContentPresenter 
+        Content="{Binding Path=DisplayName}" 
+        VerticalAlignment="Center"
+        />
+        </DockPanel>
+    </DataTemplate>
+
+    <!--This template explains how to render the 'Workspace' content area in the main window.-->
+    <DataTemplate x:Key="WorkspacesTemplate">
+        <TabControl 
+      BorderBrush="LightGray"
+      BorderThickness="1"
+      Background="Azure"
+      IsSynchronizedWithCurrentItem="True" 
+      ItemsSource="{Binding}" 
+      ItemTemplate="{StaticResource ClosableTabItemTemplate}"
+      Margin="4"
+      />
+    </DataTemplate>
+</ResourceDictionary>

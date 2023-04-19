@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GymFitModelStoreContainer" CdmEntityContainer="GymFitEntities">
+    <EntitySetMapping Name="Adres">
+      <EntityTypeMapping TypeName="GymFitModel.Adres">
+        <MappingFragment StoreEntitySet="Adres">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Kraj" ColumnName="Kraj" />
+          <ScalarProperty Name="IdWojewodztwa" ColumnName="IdWojewodztwa" />
+          <ScalarProperty Name="Miejscowosc" ColumnName="Miejscowosc" />
+          <ScalarProperty Name="Ulica" ColumnName="Ulica" />
+          <ScalarProperty Name="NrDomu" ColumnName="NrDomu" />
+          <ScalarProperty Name="NrLokalu" ColumnName="NrLokalu" />
+          <ScalarProperty Name="KodPocztowy" ColumnName="KodPocztowy" />
+          <ScalarProperty Name="Poczta" ColumnName="Poczta" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dostawca">
+      <EntityTypeMapping TypeName="GymFitModel.Dostawca">
+        <MappingFragment StoreEntitySet="Dostawca">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdAdresuSiedziby" ColumnName="IdAdresuSiedziby" />
+          <ScalarProperty Name="IdStatusu" ColumnName="IdStatusu" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+          <ScalarProperty Name="NIP" ColumnName="NIP" />
+          <ScalarProperty Name="OsobaKontaktowa" ColumnName="OsobaKontaktowa" />
+          <ScalarProperty Name="NrTelefonu" ColumnName="NrTelefonu" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Faktura">
+      <EntityTypeMapping TypeName="GymFitModel.Faktura">
+        <MappingFragment StoreEntitySet="Faktura">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Numer" ColumnName="Numer" />
+          <ScalarProperty Name="IdDostawcy" ColumnName="IdDostawcy" />
+          <ScalarProperty Name="IdKlienta" ColumnName="IdKlienta" />
+          <ScalarProperty Name="IdSposobuPlatnosci" ColumnName="IdSposobuPlatnosci" />
+          <ScalarProperty Name="DataWystawienia" ColumnName="DataWystawienia" />
+          <ScalarProperty Name="TerminPlatnosci" ColumnName="TerminPlatnosci" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grafik">
+      <EntityTypeMapping TypeName="GymFitModel.Grafik">
+        <MappingFragment StoreEntitySet="Grafik">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdPracownika" ColumnName="IdPracownika" />
+          <ScalarProperty Name="Dzien" ColumnName="Dzien" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Karnet">
+      <EntityTypeMapping TypeName="GymFitModel.Karnet">
+        <MappingFragment StoreEntitySet="Karnet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NumerKarty" ColumnName="NumerKarty" />
+          <ScalarProperty Name="WaznyOd" ColumnName="WaznyOd" />
+          <ScalarProperty Name="WaznyDo" ColumnName="WaznyDo" />
+          <ScalarProperty Name="IdKlienta" ColumnName="IdKlienta" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajcego" ColumnName="IdPracownikaDodajcego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Klient">
+      <EntityTypeMapping TypeName="GymFitModel.Klient">
+        <MappingFragment StoreEntitySet="Klient">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdOsoby" ColumnName="IdOsoby" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notatka">
+      <EntityTypeMapping TypeName="GymFitModel.Notatka">
+        <MappingFragment StoreEntitySet="Notatka">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdPracownika" ColumnName="IdPracownika" />
+          <ScalarProperty Name="Tytuł" ColumnName="Tytuł" />
+          <ScalarProperty Name="Notatka1" ColumnName="Notatka" />
+          <ScalarProperty Name="CzyAktywna" ColumnName="CzyAktywna" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObiektSportowy">
+      <EntityTypeMapping TypeName="GymFitModel.ObiektSportowy">
+        <MappingFragment StoreEntitySet="ObiektSportowy">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Osoba">
+      <EntityTypeMapping TypeName="GymFitModel.Osoba">
+        <MappingFragment StoreEntitySet="Osoba">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Plec" ColumnName="Plec" />
+          <ScalarProperty Name="DataUrodzenia" ColumnName="DataUrodzenia" />
+          <ScalarProperty Name="IdAdresu" ColumnName="IdAdresu" />
+          <ScalarProperty Name="NrTelefonu" ColumnName="NrTelefonu" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PozycjaFaktury">
+      <EntityTypeMapping TypeName="GymFitModel.PozycjaFaktury">
+        <MappingFragment StoreEntitySet="PozycjaFaktury">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdFaktury" ColumnName="IdFaktury" />
+          <ScalarProperty Name="IdTowaru" ColumnName="IdTowaru" />
+          <ScalarProperty Name="Cena" ColumnName="Cena" />
+          <ScalarProperty Name="Ilosc" ColumnName="Ilosc" />
+          <ScalarProperty Name="Rabat" ColumnName="Rabat" />
+          <ScalarProperty Name="CzyAktywna" ColumnName="CzyAktywna" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pracownik">
+      <EntityTypeMapping TypeName="GymFitModel.Pracownik">
+        <MappingFragment StoreEntitySet="Pracownik">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdOsoby" ColumnName="IdOsoby" />
+          <ScalarProperty Name="NazwaStanowiska" ColumnName="NazwaStanowiska" />
+          <ScalarProperty Name="DataZatrudnienia" ColumnName="DataZatrudnienia" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SposobPlatnosci">
+      <EntityTypeMapping TypeName="GymFitModel.SposobPlatnosci">
+        <MappingFragment StoreEntitySet="SposobPlatnosci">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="GymFitModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="GymFitModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Szafka">
+      <EntityTypeMapping TypeName="GymFitModel.Szafka">
+        <MappingFragment StoreEntitySet="Szafka">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdObiektu" ColumnName="IdObiektu" />
+          <ScalarProperty Name="Numer" ColumnName="Numer" />
+          <ScalarProperty Name="CzyAktywna" ColumnName="CzyAktywna" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Towar">
+      <EntityTypeMapping TypeName="GymFitModel.Towar">
+        <MappingFragment StoreEntitySet="Towar">
+          <ScalarProperty Name="Cena" ColumnName="Cena" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="StawkaVatZakupu" ColumnName="StawkaVatZakupu" />
+          <ScalarProperty Name="StawkaVatSprzedazy" ColumnName="StawkaVatSprzedazy" />
+          <ScalarProperty Name="Marza" ColumnName="Marza" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wizyta">
+      <EntityTypeMapping TypeName="GymFitModel.Wizyta">
+        <MappingFragment StoreEntitySet="Wizyta">
+          <ScalarProperty Name="IdObiektu" ColumnName="IdObiektu" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdPracownika" ColumnName="IdPracownika" />
+          <ScalarProperty Name="IdKlienta" ColumnName="IdKlienta" />
+          <ScalarProperty Name="IdKarnetu" ColumnName="IdKarnetu" />
+          <ScalarProperty Name="IdSzafki" ColumnName="IdSzafki" />
+          <ScalarProperty Name="DataCzasRozpoczecia" ColumnName="DataCzasRozpoczecia" />
+          <ScalarProperty Name="DataCzasZakonczenia" ColumnName="DataCzasZakonczenia" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wojewodztwo">
+      <EntityTypeMapping TypeName="GymFitModel.Wojewodztwo">
+        <MappingFragment StoreEntitySet="Wojewodztwo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zadanie">
+      <EntityTypeMapping TypeName="GymFitModel.Zadanie">
+        <MappingFragment StoreEntitySet="Zadanie">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Zadanie1" ColumnName="Zadanie" />
+          <ScalarProperty Name="DataWyswietlenia" ColumnName="DataWyswietlenia" />
+          <ScalarProperty Name="DataWykonania" ColumnName="DataWykonania" />
+          <ScalarProperty Name="CzyWykonane" ColumnName="CzyWykonane" />
+          <ScalarProperty Name="IdPracownika" ColumnName="IdPracownika" />
+          <ScalarProperty Name="IdPracownikaZlecajacego" ColumnName="IdPracownikaZlecajacego" />
+          <ScalarProperty Name="Priorytet" ColumnName="Priorytet" />
+          <ScalarProperty Name="CzyAktywny" ColumnName="CzyAktywny" />
+          <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+          <ScalarProperty Name="IdPracownikaDodajacego" ColumnName="IdPracownikaDodajacego" />
+          <ScalarProperty Name="DataCzasDodania" ColumnName="DataCzasDodania" />
+          <ScalarProperty Name="IdPracownikaModyfikujacego" ColumnName="IdPracownikaModyfikujacego" />
+          <ScalarProperty Name="DataCzasModyfikacji" ColumnName="DataCzasModyfikacji" />
+          <ScalarProperty Name="IdPracownikaKasujacego" ColumnName="IdPracownikaKasujacego" />
+          <ScalarProperty Name="DataCzasSkasowania" ColumnName="DataCzasSkasowania" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="KarnetObiekt" TypeName="GymFitModel.KarnetObiekt" StoreEntitySet="KarnetObiekt">
+      <EndProperty Name="Karnet">
+        <ScalarProperty Name="Id" ColumnName="IdKarnetu" />
+      </EndProperty>
+      <EndProperty Name="ObiektSportowy">
+        <ScalarProperty Name="Id" ColumnName="IdObiektu" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

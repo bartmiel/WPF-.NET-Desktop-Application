@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ee4fa2e5ca82414f94a0568e45fcea00" Name="Diagram1">
+        <EntityTypeShape EntityType="GymFitModel.Adres" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Dostawca" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Faktura" Width="1.5" PointX="7.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Grafik" Width="1.5" PointX="9.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Karnet" Width="1.5" PointX="9.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Klient" Width="1.5" PointX="7.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Notatka" Width="1.5" PointX="9.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.ObiektSportowy" Width="1.5" PointX="12" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Osoba" Width="1.5" PointX="5.25" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.PozycjaFaktury" Width="1.5" PointX="9.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Pracownik" Width="1.5" PointX="7.5" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.SposobPlatnosci" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Status" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Szafka" Width="1.5" PointX="14.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Towar" Width="1.5" PointX="7.5" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Wizyta" Width="1.5" PointX="12" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Wojewodztwo" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymFitModel.Zadanie" Width="1.5" PointX="9.75" PointY="26" IsExpanded="true" />
+        <AssociationConnector Association="GymFitModel.FK_Adres_Wojewodztwo" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Dostawca_Adres" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Osoba_Adres" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Osoba_Adres1" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Dostawca_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Faktura_Dostawca" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Faktura_SposobPlatnosci" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_PozycjaFaktury_Faktura" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Grafik_Pracownicy1" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Karnet_Klient" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Wizyta_Karnet" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Klient_Osoba" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Wizyta_Klient" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Notatka_Pracownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Szafka_ObiektSportowy" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Pracownicy_Osoba" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_PozycjaFaktury_Towar" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Wizyta_Pracownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Zadanie_Pracownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.KarnetObiekt" ManuallyRouted="false" />
+        <AssociationConnector Association="GymFitModel.FK_Wizyta_ObiektSportowy" />
+        <AssociationConnector Association="GymFitModel.FK_Wizyta_Szafka" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
